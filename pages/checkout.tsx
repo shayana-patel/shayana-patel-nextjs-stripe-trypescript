@@ -5,7 +5,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 export default function Checkout() {
 const handleClick = async (e) => {
   // Call your backend to create the Checkout session
-  const { sessionId } = await fetch('api/checkout/session', {
+  const { sessionId } = await fetch('/api/checkout/session', {
     method: 'POST',
     headers: {
       "content-type": "application/json"
