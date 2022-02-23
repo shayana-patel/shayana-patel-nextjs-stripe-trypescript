@@ -14,7 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       quantity,
     }],
     mode: 'payment',
-    success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`, //'http://localhost:3000/sucess?session_id={CHECKOUT_SESSION_ID}'//
+    success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${req.headers.origin}/checkout`
 
   })

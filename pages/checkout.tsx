@@ -15,7 +15,7 @@ const handleClick = async (e) => {
   //When the customer clicks on tge button, redirect them to Checkout
   const stripe = await stripePromise;
   const { error } = await stripe.redirectToCheckout({
-    sessionId,
+    sessionId
   });
 }
 

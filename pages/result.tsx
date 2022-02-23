@@ -7,7 +7,8 @@ export default function Result() {
 
   const { data, error } = useSWR(
     router.query.session_id ? `/api/checkout/${router.query.session_id}` : null,
-    (url) => fetch(url).then(res => res.json())
+    (url) => fetch(url)
+      .then(res => res.json())
   ) 
 
   return (
